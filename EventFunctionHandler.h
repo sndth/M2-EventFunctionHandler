@@ -48,5 +48,6 @@ public:
 
 private:
 	SFunctionHandler* GetHandlerByName(const std::string_view event_name) const;
+	std::vector<std::string> m_event_pending;
 	std::unordered_map<std::string, std::unique_ptr<SFunctionHandler>> m_event;
 };
